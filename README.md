@@ -1,6 +1,7 @@
 # POSTER
 
 A Mini-web App that embodies the CRUD operation and interacts with an external API to store Posts
+## Built With React
 
 # LINK
 https://infallible-lichterman-463e9e.netlify.app/
