@@ -1,12 +1,22 @@
 import React from 'react';
+import createHistory from 'history/createBrowserHistory'
 import ReactDOM from 'react-dom';
-import './index.css';
+import {Provider} from 'react-redux'
+import {Route, Switch, Router} from 'react-router-dom'
+import './index.scss';
 import App from './App';
+import store from './Redux/store'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router history={createHistory()} >
+      <Provider store={store}>
+        <Switch>
+          <Route path='/' component={App} />
+        </Switch>
+      </Provider>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
